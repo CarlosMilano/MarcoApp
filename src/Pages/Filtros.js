@@ -4,18 +4,15 @@ import NavBar from "../Components/NavBar";
 import {Link } from "react-router-dom";
 import "./styles.css"
 
-function ObrasRA() {
+
+function Filtros() {
   return(
     <div>
       <NavBar/>
       <div className="boton">
-        <button>Obras Mostradas</button>
-        <button>Obras Guardadas</button>
-      </div>
-      <div className="boton">
         <button>
-          <Link to="/AgregarObras">
-              Agregar Obra
+          <Link to="/AgregarFiltros">
+              Agregar Filtros
           </Link>
         </button>
       </div>
@@ -24,4 +21,4 @@ function ObrasRA() {
 
 }
 
-export default ObrasRA;
+export default Filtros;

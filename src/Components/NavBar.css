@@ -14,26 +14,29 @@
    li {
     list-style: none;
    }
-  
+   
   /* NAVBAR STYLING STARTS */
   .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 14px;
-    background-color: #FF336E;
+    background-color: #EB199F;
     color: #fff;
    }
    .nav-links a {
+    font-size: small;
     color: #fff;
    }
    /* LOGO */
-   .logo {
-    font-size: 32px;
+   img {
+    height: 32px;
+
    }
    /* NAVBAR MENU */
    .menu {
     display: flex;
+    align-items: center;
     gap: 1em;
     font-size: 16px;
    }
@@ -94,5 +97,13 @@
     background: rgba(0, 0, 0, 0.75);
     font-size: 14px;
     text-align: center;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
   }
     

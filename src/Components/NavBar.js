@@ -2,61 +2,64 @@ import React from 'react'
 import "./NavBar.css"
 import {Link } from "react-router-dom";
 
-
-
 const NavBar = () => {
   return (
     <div>
-    <nav className="navbar">
-     {/*LOGO*/}
-     <div className="logo">MARCO</div>
-     {/* NAVIGATION MENU */}
-     <ul className="nav-links">
-      <div className="menu">
-      {/*NAVIGATION MENUS*/}
-         <li className="nav-item">
-            <Link className="nav-link" to="/">
-               Admin <i className="material-symbols-outlined">admin_panel_settings</i>
-            </Link>
-         </li>
-         <li className="nav-item">
-            <Link className="nav-link" to="/">
-               Usuarios <i className="material-symbols-outlined">group</i>
-            </Link>
-         </li>
-         <li className="nav-item">
-            <Link className="nav-link" to="/">
-               Guias <i className="material-symbols-outlined">info</i>
-            </Link>
-         </li>
-         <li className="nav-item">
-            <Link className="nav-link" to="/">
-               Reservaciones <i className="material-symbols-outlined">calendar_month</i>
-            </Link>
-         </li>
-         <li className="nav-item">
-            <Link className="nav-link" to="/">
-               Actividades <i className="material-symbols-outlined">sprint</i>
-            </Link>
-         </li>
-         <li className="nav-item">
-            <Link className="nav-link" to="/">
-               Exposiciones <i className="material-symbols-outlined">slideshow</i>
-            </Link>
-         </li>
-         <li className="nav-item">
-            <Link className="nav-link" to="/ObrasRA">
-               ObrasRA <i className="material-symbols-outlined">smartphone</i>
-            </Link>
-         </li>
-         <li className="nav-item">
-            <Link className="nav-link" to="/">
-               Logout <i className="material-symbols-outlined">logout</i>
-            </Link>
-         </li>
-      </div>
-     </ul>
-   </nav>
+      <nav className="navbar">
+      {/* NAVIGATION MENU */}
+      <ul className="nav-links">
+        <div className="menu">
+          {/*LOGO*/}
+          <img src='/Marco-Titulo-blanco.png' alt='logo' />
+        {/*NAVIGATION MENUS*/}
+          <li className="nav-item">
+              <Link className="nav-link" to="/">
+                <i className="material-symbols-outlined">admin_panel_settings</i> Admin
+              </Link>
+          </li>
+          <li className="nav-item">
+              <Link className="nav-link" to="/">
+                <i className="material-symbols-outlined">group</i> Usuarios
+              </Link>
+          </li>
+          <li className="nav-item">
+              <Link className="nav-link" to="/">
+                <i className="material-symbols-outlined">info</i> Guias
+              </Link>
+          </li>
+          <li className="nav-item">
+              <Link className="nav-link" to="/">
+                <i className="material-symbols-outlined">calendar_month</i> Reservaciones
+              </Link>
+          </li>
+          <li className="nav-item">
+              <Link className="nav-link" to="/">
+                <i className="material-symbols-outlined">sprint</i> Actividades
+              </Link>
+          </li>
+          <li className="nav-item">
+              <Link className="nav-link" to="/">
+                <i className="material-symbols-outlined">slideshow</i> Exposiciones
+              </Link>
+          </li>
+          <li className="nav-item">
+              <Link className="nav-link" to="/ObrasRA">
+                <i className="material-symbols-outlined">smartphone</i> ObrasRA
+              </Link>
+          </li>
+          <li className="nav-item">
+              <Link className="nav-link" to="/Filtros">
+                <i className="material-symbols-outlined">photo_camera</i> Filtros
+              </Link>
+          </li>
+          <li className="nav-item">
+              <Link className="nav-link" to="/">
+                <i className="material-symbols-outlined">logout</i> Logout
+              </Link>
+          </li>
+        </div>
+      </ul>
+      </nav>
     </div>
   )
 }
