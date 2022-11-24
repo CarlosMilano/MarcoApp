@@ -2,3 +2,13 @@
   text-align: center;
   color: #000;
 }
+
+.mostrados {
+  border-color: grey;
+  background-color: #F5ECE7;
+}
+
+.botonAgregar {
+  background-color: #EB199F;
+  color: white;
+}

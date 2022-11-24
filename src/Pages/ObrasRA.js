@@ -1,24 +1,32 @@
 import React from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import {Routes, Route, useNavigate} from "react-router-dom";
 import NavBar from "../Components/NavBar";
-import {Link } from "react-router-dom";
 import "./styles.css"
+import AgregarObras from "./AgregarObras";
 
 function ObrasRA() {
+  const navigate = useNavigate();
+
+  const navAgregarObra = () => {
+    navigate('/AgregarObras');
+  }
+
   return(
     <div>
       <NavBar/>
       <div className="boton">
-        <button>Obras Mostradas</button>
-        <button>Obras Guardadas</button>
+        <button className="mostrados">Obras Mostradas</button>
+        <button className="mostrados">Obras Guardadas</button>
       </div>
       <div className="boton">
-        <button>
-          <Link to="/AgregarObras">
-              Agregar Obra
-          </Link>
+        <button className="botonAgregar" onClick={navAgregarObra}>
+          Agregar Obras
         </button>
       </div>
+
+      <Routes>
+        <Route path="/AgregarObras" element={<AgregarObras />} />
+      </Routes>
     </div>
   )
 
