@@ -23,9 +23,10 @@ function AgregarFiltros() {
       </div>
     </form>
 
-    <button type="button" class="btn btn-primary">Agregar Filtro</button>
-
-    <button type="button" class="btn btn-danger">Descartar Filtro</button>
+    <div className="botonesDatos">
+      <button type="button" class="btn btn-primary">Agregar Filtro</button>
+      <button type="button" class="btn btn-danger">Descartar Filtro</button>
+    </div>
 
   </div>
   )

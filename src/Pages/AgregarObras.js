@@ -55,9 +55,10 @@ function AgregarObras() {
       </div>
     </form>
 
-    <button type="button" class="btn btn-primary">Agregar Obra</button>
-
-    <button type="button" class="btn btn-danger">Descartar Obra</button>
+    <div className="botonesDatos">
+      <button type="button" class="btn btn-primary" >Agregar Obra</button>
+      <button type="button" class="btn btn-danger">Descartar Obra</button>
+    </div>
 
   </div>
   )

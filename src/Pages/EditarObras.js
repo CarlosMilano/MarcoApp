@@ -55,9 +55,10 @@ function EditarObras() {
       </div>
     </form>
 
-    <button type="button" class="btn btn-primary">Editar Obra</button>
-
-    <button type="button" class="btn btn-danger">Borrar Obra</button>
+    <div className="botonesDatos">
+      <button type="button" class="btn btn-primary">Editar Obra</button>
+      <button type="button" class="btn btn-danger">Borrar Obra</button>
+    </div>
 
   </div>
   )

@@ -23,9 +23,10 @@ function EditarFiltros() {
       </div>
     </form>
 
-    <button type="button" class="btn btn-primary">Editar Filtro</button>
-
-    <button type="button" class="btn btn-danger">Borrar Filtro</button>
+    <div className="botonesDatos">
+      <button type="button" class="btn btn-primary">Editar Filtro</button>
+      <button type="button" class="btn btn-danger">Borrar Filtro</button>
+    </div>
 
   </div>
   )

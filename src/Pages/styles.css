@@ -27,6 +27,11 @@
   padding: 10px;
 }
 
+.botonesDatos {
+  text-align: center;
+  padding: 10px;
+}
+
 .login {
   max-width: max-content;
   max-height: max-content;
