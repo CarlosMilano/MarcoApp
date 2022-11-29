@@ -1,5 +1,7 @@
 import "./App.css";
-import ObrasRA from "./Pages/ObrasRA.js";
+import Login from "./Pages/Login.js";
+import ObrasRAMostradas from "./Pages/ObrasRAMostradas.js";
+import ObrasRAGuardadas from "./Pages/ObrasRAGuardadas.js";
 import Filtros from "./Pages/Filtros.js";
 import AgregarObras from "./Pages/AgregarObras.js";
 import AgregarFiltros from "./Pages/AgregarFiltros.js";
@@ -12,7 +14,9 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<ObrasRA />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/ObrasMostradas" element={<ObrasRAMostradas />} />
+          <Route path="/ObrasGuardadas" element={<ObrasRAGuardadas />} />
           <Route path="/Filtros" element={<Filtros />} />
           <Route path="/AgregarObras" element={<AgregarObras />} />
           <Route path="/AgregarFiltros" element={<AgregarFiltros />} />
