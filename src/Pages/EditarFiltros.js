@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "../Components/NavBar";
 
 
-function AgregarFiltros() {
+function EditarFiltros() {
   return (
   <div>
     <NavBar/>
@@ -23,12 +23,12 @@ function AgregarFiltros() {
       </div>
     </form>
 
-    <button type="button" class="btn btn-primary">Agregar Filtro</button>
+    <button type="button" class="btn btn-primary">Editar Filtro</button>
 
-    <button type="button" class="btn btn-danger">Descartar Filtro</button>
+    <button type="button" class="btn btn-danger">Borrar Filtro</button>
 
   </div>
   )
 }
 
-export default AgregarFiltros;
+export default EditarFiltros;

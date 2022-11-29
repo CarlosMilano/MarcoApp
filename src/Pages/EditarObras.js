@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../Components/NavBar";
 
-function AgregarObras() {
+function EditarObras() {
   return (
   <div>
     <NavBar/>
@@ -55,12 +55,12 @@ function AgregarObras() {
       </div>
     </form>
 
-    <button type="button" class="btn btn-primary">Agregar Obra</button>
+    <button type="button" class="btn btn-primary">Editar Obra</button>
 
-    <button type="button" class="btn btn-danger">Descartar Obra</button>
+    <button type="button" class="btn btn-danger">Borrar Obra</button>
 
   </div>
   )
 }
 
-export default AgregarObras;
+export default EditarObras;

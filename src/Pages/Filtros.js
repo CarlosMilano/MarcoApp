@@ -2,6 +2,7 @@ import React from "react";
 import {Routes, Route, useNavigate} from "react-router-dom";
 import NavBar from "../Components/NavBar";
 import AgregarFiltros from "./AgregarFiltros";
+import Card from "../Components/CardFiltro";
 import "./styles.css"
 
 
@@ -20,6 +21,8 @@ function Filtros() {
           Agregar Filtros
         </button>
       </div>
+
+      <Card />
 
       <Routes>
         <Route path="/AgregarFiltros" element={<AgregarFiltros />} />

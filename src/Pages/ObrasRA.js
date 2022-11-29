@@ -3,6 +3,7 @@ import {Routes, Route, useNavigate} from "react-router-dom";
 import NavBar from "../Components/NavBar";
 import "./styles.css"
 import AgregarObras from "./AgregarObras";
+import Card from "../Components/CardObra";
 
 function ObrasRA() {
   const navigate = useNavigate();
@@ -24,9 +25,12 @@ function ObrasRA() {
         </button>
       </div>
 
+      <Card />
+
       <Routes>
         <Route path="/AgregarObras" element={<AgregarObras />} />
       </Routes>
+
     </div>
   )
 
