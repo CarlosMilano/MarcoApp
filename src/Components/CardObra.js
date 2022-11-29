@@ -12,7 +12,7 @@ function BasicExample() {
   return (
     <div>
       <button onClick={navEditarObra}>
-        <Card style={{ width: '25rem' }} className='text-center'>
+        <Card style={{ width: '25rem' }}>
           <Card.Img style={{ height: '15rem' }} variant="top" src="/logo512.png" />
           <Card.Body>
             <Card.Title>Nombre de la obra</Card.Title>

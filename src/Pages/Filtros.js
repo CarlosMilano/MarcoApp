@@ -22,7 +22,14 @@ function Filtros() {
         </button>
       </div>
 
-      <Card />
+      <div className="grid">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
 
       <Routes>
         <Route path="/AgregarFiltros" element={<AgregarFiltros />} />

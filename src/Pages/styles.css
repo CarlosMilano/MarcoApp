@@ -27,6 +27,14 @@
   padding: 10px;
 }
 
+.grid {
+  padding: 65px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 30rem 30rem 30rem;
+  grid-gap: 1rem;
+}
+
 .botonesDatos {
   text-align: center;
   padding: 10px;

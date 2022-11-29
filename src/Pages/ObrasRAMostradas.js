@@ -30,7 +30,14 @@ function ObrasRA() {
         </button>
       </div>
 
-      <Card />
+      <div className="grid">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
 
       <Routes>
         <Route path="/AgregarObras" element={<AgregarObras />} />
