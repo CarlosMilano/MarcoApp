@@ -12,7 +12,7 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/ObrasRA" element={<ObrasRA />} />
+          <Route path="/" element={<ObrasRA />} />
           <Route path="/Filtros" element={<Filtros />} />
           <Route path="/AgregarObras" element={<AgregarObras />} />
           <Route path="/AgregarFiltros" element={<AgregarFiltros />} />

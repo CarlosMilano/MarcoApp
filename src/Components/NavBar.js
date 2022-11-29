@@ -13,37 +13,37 @@ const NavBar = () => {
           <img src='/Marco-Titulo-blanco.png' alt='logo' />
         {/*NAVIGATION MENUS*/}
           <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link">
                 <i className="material-symbols-outlined">admin_panel_settings</i> Admin
               </Link>
           </li>
           <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link">
                 <i className="material-symbols-outlined">group</i> Usuarios
               </Link>
           </li>
           <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link">
                 <i className="material-symbols-outlined">info</i> Guias
               </Link>
           </li>
           <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link">
                 <i className="material-symbols-outlined">calendar_month</i> Reservaciones
               </Link>
           </li>
           <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link">
                 <i className="material-symbols-outlined">sprint</i> Actividades
               </Link>
           </li>
           <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link">
                 <i className="material-symbols-outlined">slideshow</i> Exposiciones
               </Link>
           </li>
           <li className="nav-item">
-              <Link className="nav-link" to="/ObrasRA">
+              <Link className="nav-link" to="/">
                 <i className="material-symbols-outlined">smartphone</i> ObrasRA
               </Link>
           </li>
@@ -53,7 +53,7 @@ const NavBar = () => {
               </Link>
           </li>
           <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link">
                 <i className="material-symbols-outlined">logout</i> Logout
               </Link>
           </li>
