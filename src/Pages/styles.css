@@ -4,6 +4,10 @@
   padding: 10px;
 }
 
+.boton button:hover {
+  background-color: gray;
+}
+
 .mostrados {
   border-color: grey;
   background-color: #F5ECE7;
