@@ -1,0 +1,15 @@
+    img: {
+        data: Buffer,
+        contentType: String,
+      },
+    
+    // model3D : {}
+    // audioDescription: {}
+
+    name: { type: String, required: true },
+    creationYear: { type: String, required: true },
+    author: { type: String, required: true },
+    description: { type: String, required: true },
+    type: { type: String, required: true },
+    isInExhibition: {type: Boolean, required: true },
+  },

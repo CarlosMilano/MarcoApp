@@ -2,7 +2,7 @@ import React from "react";
 import {Routes, Route, useNavigate} from "react-router-dom";
 import NavBar from "../Components/NavBar";
 import "./styles.css"
-import AgregarObras from "./AgregarObras";
+import AgregarObras from "./AgregarObrasViejo";
 
 function ObrasRA() {
   const navigate = useNavigate();

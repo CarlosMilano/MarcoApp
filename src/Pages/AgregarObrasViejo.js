@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../Components/NavBar";
 
-function AgregarObras() {
+function AgregarObrasViejo() {
   return (
   <div>
     <NavBar/>
@@ -63,4 +63,4 @@ function AgregarObras() {
   )
 }
 
-export default AgregarObras;
+export default AgregarObrasViejo;
