@@ -2,13 +2,13 @@ import React from "react";
 import {Routes, Route, useNavigate} from "react-router-dom";
 import NavBar from "../Components/NavBar";
 import "./styles.css"
-import AgregarObras from "./AgregarObrasViejo";
+import AgregarObrasPasadas from "../Components/AgregarObrasPasadas";
 
 function ObrasRA() {
   const navigate = useNavigate();
 
   const navAgregarObra = () => {
-    navigate('/AgregarObras');
+    navigate('/AgregarObrasPasadas');
   }
 
   return(
@@ -25,7 +25,7 @@ function ObrasRA() {
       </div>
 
       <Routes>
-        <Route path="/AgregarObras" element={<AgregarObras />} />
+        <Route path="/AgregarObrasPasadas" element={<AgregarObrasPasadas />} />
       </Routes>
     </div>
   )

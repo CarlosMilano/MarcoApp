@@ -2,10 +2,10 @@ import React from "react";
 import NavBar from "../Components/NavBar";
 
 
-function AgregarObras() {
+function AgregarFiltrosViejo() {
   return (
   <div>
-    <NavBar/>
+    <NavBar/> 
     <form>
       <div class="form-group">
         <label for="exampleFormControlFile1">Imagen:</label>
@@ -31,4 +31,4 @@ function AgregarObras() {
   )
 }
 
-export default AgregarObras;
+export default AgregarFiltrosViejo;

@@ -3,10 +3,12 @@ import "./App.css";
 import AgregarObrasViejo from "./Pages/AgregarObrasViejo.js";
 import ObrasRA from "./Pages/ObrasRA.js";
 import Filtros from "./Pages/Filtros.js";
-import AgregarFiltros from "./Pages/AgregarFiltros.js";
+import AgregarFiltrosViejo from "./Pages/AgregarFiltrosViejo.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import CreditCard from "./Components/creditCard";
-import AgregarObras from "./Components/AgregarObras"
+import AgregarFiltros from "./Components/AgregarFiltros"
+import AgregarObrasRA from "./Components/AgregarObrasRA";
+import AgregarObrasPasadas from "./Components/AgregarObrasPasadas";
+
 
 function App() {
   return (
@@ -14,13 +16,13 @@ function App() {
     {/* <CreditCard /> */}
      <Router>
         <Routes>
-          <Route path="/AgregarObras" element={<AgregarObras />} />
           <Route path="/ObrasRA" element={<ObrasRA />} />
           <Route path="/Filtros" element={<Filtros />} />
-          <Route path="/AgregarFiltros" element={<AgregarFiltros />} />
-          <Route path="/CreditCard" element={<CreditCard />} />
+          <Route path="/AgregarFiltrosViejo" element={<AgregarFiltrosViejo />} />
+          <Route path="/AgregarObrasRA" element={<AgregarObrasRA />} />
+          <Route path="/AgregarObrasPasadas" element={<AgregarObrasPasadas />} />
           <Route path="/viejo" element={<AgregarObrasViejo />} />
-
+          <Route path="/agregarFiltros" element={<AgregarFiltros />} />
         </Routes>
       </Router>
     </div>

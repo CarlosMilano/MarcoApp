@@ -38,8 +38,8 @@ const NavBar = () => {
               </Link>
           </li>
           <li className="nav-item">
-              <Link className="nav-link" to="/">
-                <i className="material-symbols-outlined">slideshow</i> Exposiciones
+              <Link className="nav-link" to="/AgregarObrasPasadas">
+                <i className="material-symbols-outlined">slideshow</i> ObrasPasadas
               </Link>
           </li>
           <li className="nav-item">

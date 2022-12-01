@@ -1,7 +1,7 @@
 import React from "react";
 import {Routes, Route, useNavigate} from "react-router-dom";
 import NavBar from "../Components/NavBar";
-import AgregarFiltros from "./AgregarFiltros";
+import AgregarFiltros from "./AgregarFiltrosViejo";
 import "./styles.css"
 
 

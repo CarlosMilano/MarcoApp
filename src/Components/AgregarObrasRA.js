@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
+import NavBar from "./NavBar";
 
-const AddArticle = () => {
+
+const AgregarObrasRA = () => {
+  const [title, setTitle] = useState(""); // title 
   const [author, setAuthor] = useState(""); // title 
   const [creationYear, setCreationYear] = useState("");
   const [description, setDescription] = useState("");
@@ -11,30 +14,42 @@ const AddArticle = () => {
 
   const [message, setMessage] = useState("");
   const [fileName, setFileName] = useState("");
+  const [fileName2, setFileName2] = useState("");
+  const [fileName3, setFileName3] = useState("");
 
-  const routeAPI = "localhost:3005/obrasRA"
+
+
+  const routeAPI = "http://localhost:3005/obrasRA"
 
   const onChangeFile = (e) => {
     setFileName(e.target.files[0]);
+    setFileName2(e.target.files[0]);
+    setFileName3(e.target.files[0]);
   };
+
+
 
   const changeOnClick = (e) => {
     e.preventDefault();
 
     const formData = new FormData();
 
+    formData.append("title", title)
     formData.append("author", author);
     formData.append("creationYear", creationYear);
     formData.append("description", description);
-    formData.append("imageName", fileName);
     formData.append("type", type);
     formData.append("isInExhibition", isInExhibition);
+    formData.append("imageName", fileName);
+    formData.append("model3dName", fileName2);
+    formData.append("audioDescriptionName", fileName3);
 
+    setTitle("");
     setAuthor("");
     setCreationYear("");
     setDescription("");
-	setType("");
-	setIsInExhibition("");
+    setType("");
+    setIsInExhibition("0");
     axios
       .post(routeAPI, formData)
       .then((res) => setMessage(res.data))
@@ -44,63 +59,76 @@ const AddArticle = () => {
   };
 
   return (
+    <>
+      <NavBar/>
+
     <AddArticleContainer>
       <div className="container">
-        <h1>Add New Article</h1>
+        <h1>Agregar Obra-RA</h1>
         <span className="message">{message}</span>
         <form onSubmit={changeOnClick} encType="multipart/form-data">
+        <div className="form-group">
+            <label htmlFor="title"> Título de la obra </label>
+            <input
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              className="form-control"
+              placeholder="Ej. El espejo perfecto"
+            />
+          </div>
           <div className="form-group">
-            <label htmlFor="author">Author Name</label>
+            <label htmlFor="author"> Nombre del autor </label>
             <input
               type="text"
               value={author}
               onChange={(e) => setAuthor(e.target.value)}
               className="form-control"
-              placeholder="Autor"
+              placeholder="Ej. Alfredo Ceibal"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="creationYear">creationYear</label>
+            <label htmlFor="creationYear">Año de Creación</label>
             <input
               type="text"
               name="creationYear"
               value={creationYear}
               onChange={(e) => setCreationYear(e.target.value)}
               className="form-control"
-              placeholder="año de creacion"
+              placeholder="Ej. 1994"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="description">description</label>
+            <label htmlFor="descripción">Descripción</label>
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               className="form-control"
-              rows="3"
+              rows="2"
             ></textarea>
           </div>
           <div className="form-group">
-            <label htmlFor="type">Type</label>
+            <label htmlFor="type">Tipo/Técnica</label>
             <input
               type="text"
               value={type}
               onChange={(e) => setType(e.target.value)}
               className="form-control"
-              placeholder="Type"
+              placeholder="Acrílico sobre lino"
             />
           </div>
+
+        <div class="form-group">
+        <label htmlFor="isInExhibition">Esta mostrado o guardado?</label>
+        <select className="form-control" id="isInExhibition"
+            onChange={(e) => setIsInExhibition(e.target.value)}>
+          <option value={1}> Mostrado </option>
+          <option value={0}> Guardado </option>
+        </select>
+        </div>
+
           <div className="form-group">
-            <label htmlFor="isInExhibition"> isInExhibition </label>
-            <input
-              type="text"
-              value={isInExhibition}
-              onChange={(e) => setIsInExhibition(e.target.value)}
-              className="form-control"
-              placeholder="Autor"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="file"> imagen obraRA</label>
+            <label htmlFor="file"> Ingrese la imagen</label>
             <input
               type="file"
               filename="imageName"
@@ -109,40 +137,70 @@ const AddArticle = () => {
             />
           </div>
 
+          <div className="form-group">
+            <label htmlFor="file"> Ingrese el modelo 3D</label>
+            <input
+              type="file"
+              filename="model3dName"
+              className="form-control-file"
+              onChange={onChangeFile}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="file"> Ingrese la descripción auditiva de la obra</label>
+            <input
+              type="file"
+              filename="audioDescriptionName"
+              className="form-control-file"
+              onChange={onChangeFile}
+            />
+          </div>
+
           <button type="submit" className="btn btn-primary">
-            Post Article
+            Agregar Obra-RA
           </button>
         </form>
       </div>
     </AddArticleContainer>
+    </>
   );
 };
 
-export default AddArticle;
+export default AgregarObrasRA;
 
 //MAIN CONTAINER
 const AddArticleContainer = styled.div`
-  margin: 3rem auto;
-  padding: 4rem;
-  width: 31.25rem;
+  margin: auto;
+  padding: 0.5rem;
+  width: 30rem;
 
   h1 {
-    font-weight: 900;
+    font-weight:650;
     color: var(--dark-green);
   }
 
   .btn-primary {
-    margin-top: 2rem;
-    background: var(--dark-green);
+    width: 20rem;
+    padding: 10px;
+    margin: 20px;
+    background: #EB199F;
+    color: #fff;
+    outline: none;
     border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
     &:hover {
-      background: var(--light-green);
-    }
+    background: transparent;
+  	border: 2px solid #6cafa4;
+  	color: #6cafa4;    }
   }
 
   .message {
     font-weight: 900;
-    color: tomato;
+    color: #EB199F;
     padding: 1rem 1rem 1rem 0;
   }
 `;
+
